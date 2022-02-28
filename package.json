@@ -1,6 +1,6 @@
 {
   "name": "sqs-fanout",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Library to make managing the SQS Fanout pattern more dynamic and easy to use",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
