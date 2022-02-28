@@ -1,15 +1,14 @@
 {
 	"compilerOptions": {
-		"declaration": true,
-		"strictNullChecks": true,
-		"target": "es5",
-		"outDir": "dist",
+		"target": "es2017",
 		"module": "commonjs",
+		"outDir": "dist",
+		"sourceMap": false,
 		"moduleResolution": "node",
-		"sourceMap": true,
-		"lib": ["es2015", "dom"],
-		"rootDir": "src"
+		"allowJs": false,
+		"noUnusedLocals": true,
+		"declaration": true
 	},
-	"include": ["src"],
+	"include": ["src/**/*"],
 	"exclude": ["node_modules", "dist"]
 }
