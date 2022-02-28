@@ -1,2 +1,2 @@
 export * from './Client';
-export * from './Resources';
+export { ResourceList, SNSResource, SQSResource, TopicSubscriptionResource } from './Resources';
