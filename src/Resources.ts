@@ -85,13 +85,19 @@ export class SQSResource extends Resource {
 				],
 			});
 		}
-
-		await client.sqsClient
-			.createQueue({
-				QueueName: this.queueName,
-				Attributes: attributes,
-			})
-			.promise();
+		
+		try {
+			await client.sqsClient
+				.createQueue({
+					QueueName: this.queueName,
+					Attributes: attributes,
+				})
+				.promise();
+		} catch (e) {
+			if (e.name != "QueueAlreadyExists") {
+				throw e;
+			}
+		}
 	}
 }
 
